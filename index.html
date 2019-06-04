@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+        <h2>Найди слона</h2>
+        <h3 class="score">Счёт 0</h3>
+         <div style="background-image: url('Antilop.jpg'); position: absolute; height: 200px; width: 300px; margin-left:150px; background-size:100%;" class="antilopa">
+         </div>
+         <div style="background-image: url('begemot.jpg'); position: absolute; height: 200px; width: 300px; background-size:100%; margin-left:950px;" class="begemot">
+          </div>
+         <div style="background-image: url('eleph.png'); position: absolute; height: 200px; width: 300px; margin-left :550px; background-size:100%;" class="elephant">
+          </div>
+         <div style="background-image: url('giena.jpg'); position: absolute; height: 200px; width: 300px; margin-left: 550px; background-size:100%; margin-top: 250px;" class="giena">
+          </div>
+         <div style="background-image: url('korova.jpg'); position: absolute; height: 200px; width: 300px; margin-left: 1000px; background-size:100%; margin-top:500px;" class="cow">
+          </div>
+         <div style="background-image: url('lion.jpg'); position: absolute;  height: 200px; width: 300px; margin-left: 500px; background-size:100%; margin-top:550px;" class="lion">
+          </div>
+         <div style="background-image: url('jiraf.jpg'); position: absolute; height: 200px; width: 300px; margin-left: 150px; background-size:100%; margin-top: 620px" class="jiraf">
+          </div>
+          <div style="background-image: url('nosorog.jpg'); position: absolute; height: 200px; width: 300px; margin-left: 10px; background-size:100%; margin-top:250px;" class="nosorog">
+            </div>
+          <div style="background-image: url('zebra.jpg'); position: absolute; height: 200px; width: 300px; margin-left:1000px; background-size:100%; margin-top:250px;" class="zebra">
+            </div>
+
+        <script type="text/javascript">
+          let score = 0;
+            let func = function(){
+              document.querySelector(".antilopa").style.background = "black";
+              document.querySelector(".begemot").style.background = "black";
+              document.querySelector(".elephant").style.background = "black";
+              document.querySelector(".giena").style.background = "black";
+              document.querySelector(".cow").style.background = "black";
+              document.querySelector(".lion").style.background = "black";
+              document.querySelector(".jiraf").style.background = "black";
+              document.querySelector(".nosorog").style.background = "black";
+              document.querySelector(".zebra").style.background = "black";
+            }
+
+            setTimeout(func, 350);
+
+            document.querySelector(".antilopa").onclick = function(){
+              alert("Не правильно, это антилопа!")
+              document.querySelector(".antilopa").style.backgroundImage = "url('Antilop.jpg')"
+                score = score - 1
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".antilopa").style.backgroundSize = "100%"
+            }
+            document.querySelector(".begemot").onclick = function(){
+              alert("Не правильно, это бегемот!")
+               document.querySelector(".begemot").style.backgroundImage = "url('begemot.jpg')"
+              score = score - 1
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".begemot").style.backgroundSize = "100%"
+            }
+            document.querySelector(".elephant").onclick = function(){
+              alert("Правильно, у тебя зоркий глаз!")
+              document.querySelector(".elephant").style.backgroundImage = "url('elephant.png')"
+              score = score + 10
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".elephant").style.backgroundSize = "100%"
+
+            }
+            document.querySelector(".giena").onclick = function(){
+              alert("Не правильно, это гиена!")
+              document.querySelector(".giena").style.backgroundImage = "url('giena.jpg')"
+              score = score - 1
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".giena").style.backgroundSize = "100%"
+            }
+            document.querySelector(".cow").onclick = function(){
+              alert("Не правильно, это корова!")
+              document.querySelector(".cow").style.backgroundImage = "url('korova.jpg')"
+              score = score - 1
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".cow").style.backgroundSize = "100%"
+            }
+            document.querySelector(".lion").onclick = function(){
+              alert("Не правильно, это лев!")
+              document.querySelector(".lion").style.backgroundImage = "url('lion.jpg')"
+              score = score - 1
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".lion").style.backgroundSize = "100%"
+            }
+            document.querySelector(".jiraf").onclick = function(){
+              alert("Не правильно, это жираф!")
+              document.querySelector(".jiraf").style.backgroundImage = "url('jiraf.jpg')"
+              score = score - 1
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".jiraf").style.backgroundSize = "100%"
+            }
+             document.querySelector(".nosorog").onclick = function(){
+              alert("Не правильно, это носорог!")
+              score = score - 1
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".nosorog").style.backgroundImage = "url('nosorog.jpg')"
+              document.querySelector(".nosorog").style.backgroundSize = "100%"
+            }
+             document.querySelector(".zebra").onclick = function(){
+              alert("Не правильно, это зебра!")
+              document.querySelector(".zebra").style.backgroundImage = "url('zebra.jpg')"
+              score = score - 1
+              document.querySelector(".score").innerHTML = score
+              document.querySelector(".zebra").style.backgroundSize = "100%"
+            }
+        </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
